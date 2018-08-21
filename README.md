@@ -37,3 +37,20 @@ $ chmod 644 .ssh/authorized_keys
 ```sh
 $ ssh grader@18.219.166.229 -i id_grader 
 ```
+
+- Firewall
+
+Change lighsail firewall to permit all ports
+All TCP+UDP	ALL	0 - 65535
+
+```sh
+$ sudo su
+$ ufw default deny incoming
+$ ufw default allow outgoing
+$ ufw allow http
+$ ufw allow 2200/tcp
+$ ufw allow ntp
+$ nano /etc/ssh/sshd_config
+Port 2200
+$ ufw enable
+```
