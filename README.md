@@ -1,5 +1,18 @@
 # Udacity Lighsail
 
+** SSH -> ssh grader@18.219.166.229 -i <id_grader> -p 2200
+** Catalog app -> http:18.219.166.229
+
+# Installed
+
+- make
+- zip
+- unzip
+- postgresql
+- python3-pip
+- libapache2-mod-wsgi-py3
+- apache2
+
 ## Step by Step
 
 - Update system
@@ -124,3 +137,23 @@ catalog=# grant all privileges on table pet_family to "www-data";
 catalog=# grant all privileges on table user_profile to "www-data";
 catalog=# grant all privileges on table pet_type to "www-data";
 ```
+
+- Pip locale error
+
+```sh
+$ export LC_ALL="en_US.UTF-8"
+$ export LC_CTYPE="en_US.UTF-8"
+$ sudo dpkg-reconfigure locales
+```
+
+# Links
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604
+
+https://support.rackspace.com/how-to/logging-in-with-an-ssh-private-key-on-linuxmac/
+
+https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-locale-setting
+
+http://leonwang.me/post/deploy-flask
+
+
