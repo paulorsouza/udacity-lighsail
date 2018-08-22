@@ -1,7 +1,8 @@
 # Udacity Lighsail
 
-** SSH -> ssh grader@18.219.166.229 -i <id_grader> -p 2200
-** Catalog app -> http:18.219.166.229
+**SSH -> ssh grader@18.219.166.229 -i <id_grader> -p 2200
+
+**Catalog app -> http:18.219.166.229
 
 # Installed
 
