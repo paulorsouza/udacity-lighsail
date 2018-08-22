@@ -147,6 +147,31 @@ $ export LC_CTYPE="en_US.UTF-8"
 $ sudo dpkg-reconfigure locales
 ```
 
+- Auto update
+
+```sh
+$ sudo apt install unattended-upgrades
+$ nano /etc/apt/apt.conf.d/20auto-upgrades
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::AutocleanInterval "7";
+APT::Periodic::Unattended-Upgrade "1";
+```
+
+- Update Dist
+
+```sh
+$ apt-get dist-upgrade
+```
+
+- PermitRootLogin no
+
+```sh
+# nano /etc/ssh/sshd_config
+PermitRootLogin no
+```
+
+
 # Links
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604
@@ -157,4 +182,5 @@ https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-loc
 
 http://leonwang.me/post/deploy-flask
 
+https://help.ubuntu.com/lts/serverguide/automatic-updates.html
 
